@@ -16,16 +16,53 @@ namespace SAOD
             //Fibonacci.Count = 0;
             //Console.WriteLine($"{Fibonacci.rec_fib(20)}, {Fibonacci.Count}");
 
-            int[,] matrix = Matrix.ToTriagleMatrix(Matrix.CreateRandomMatrix(9, 9));
-            Matrix.PrintMatrix(matrix);
-            Matrix.PrintVector(Matrix.ToVectorMatrix(matrix));
-            Matrix.PrintMatrix(Matrix.ToMatrixVector(Matrix.ToVectorMatrix(matrix), 9));
-            int[,] smatrix = Matrix.CreateSparseRandomMatrix(9, 9);
-            Matrix.PrintMatrix(smatrix);
-            Matrix.PrintSparseVectors(Matrix.ToVectorsMatrix(smatrix));
-            Matrix.PrintMatrix(Matrix.MatrixFromVectors(Matrix.ToVectorsMatrix(smatrix), 9));
-            //
+            //int[,] matrix = Matrix.ToTriagleMatrix(Matrix.CreateRandomMatrix(9, 9));
+            //Matrix.PrintMatrix(matrix);
+            //Matrix.PrintVector(Matrix.ToVectorMatrix(matrix));
+            //Matrix.PrintMatrix(Matrix.ToMatrixVector(Matrix.ToVectorMatrix(matrix), 9));
+            //int[,] smatrix = Matrix.CreateSparseRandomMatrix(9, 9);
+            //Matrix.PrintMatrix(smatrix);
+            //Matrix.PrintSparseVectors(Matrix.ToVectorsMatrix(smatrix));
+            //Matrix.PrintMatrix(Matrix.MatrixFromVectors(Matrix.ToVectorsMatrix(smatrix), 9));
             //Matrix.PrintMatrix(Matrix.SplitByShapeVector(Matrix.ToVectorMatrix(matrix), 9));
+
+            //Queen_8x8 chess = new();
+            //chess.init(Chess.print_solution);
+            //chess.solve();
+            //Console.WriteLine($"Кол-во возможных решений: {chess.solution_count}");
+
+            double[] arr = Sorts.RandomArray(2000);
+            double[] arr1 = Sorts.HalfsortArray(2000);
+
+            Console.WriteLine($"{arr.Length} {arr1.Length}");
+
+            Sorts.direct(Sorts.ArrayCopy(arr));
+            Console.WriteLine($"Прямое включение & рандом // {Sorts.Count}");
+            Sorts.Count = 0;
+            Sorts.direct(Sorts.ArrayCopy(arr1));
+            Console.WriteLine($"Прямое включение & полусорт // {Sorts.Count}");
+            Sorts.Count = 0;
+
+            Sorts.select(Sorts.ArrayCopy(arr));
+            Console.WriteLine($"Прямой выбор & рандом // {Sorts.Count}");
+            Sorts.Count = 0;
+            Sorts.select(Sorts.ArrayCopy(arr1));
+            Console.WriteLine($"Прямое выбор & полусорт // {Sorts.Count}");
+            Sorts.Count = 0;
+
+            Sorts.swap(Sorts.ArrayCopy(arr));
+            Console.WriteLine($"Прямой обмен & рандом // {Sorts.Count}");
+            Sorts.Count = 0;
+            Sorts.swap(Sorts.ArrayCopy(arr1));
+            Console.WriteLine($"Прямое обмен & полусорт // {Sorts.Count}");
+            Sorts.Count = 0;
+
+            Sorts.shaker(Sorts.ArrayCopy(arr));
+            Console.WriteLine($"Шейкерный & рандом // {Sorts.Count}");
+            Sorts.Count = 0;
+            Sorts.shaker(Sorts.ArrayCopy(arr1));
+            Console.WriteLine($"Шейкерный & полусорт // {Sorts.Count}");
+            Sorts.Count = 0;
         }
     }
 }
