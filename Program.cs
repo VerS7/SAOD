@@ -31,38 +31,65 @@ namespace SAOD
             //chess.solve();
             //Console.WriteLine($"Кол-во возможных решений: {chess.solution_count}");
 
-            double[] arr = Sorts.RandomArray(2000);
-            double[] arr1 = Sorts.HalfsortArray(2000);
+            //double[] arr = Sorts.RandomArray(2000);
+            //double[] arr1 = Sorts.HalfsortArray(2000);
 
-            Console.WriteLine($"{arr.Length} {arr1.Length}");
+            //Console.WriteLine($"{arr.Length} {arr1.Length}");
 
-            Sorts.direct(Sorts.ArrayCopy(arr));
-            Console.WriteLine($"Прямое включение & рандом // {Sorts.Count}");
-            Sorts.Count = 0;
-            Sorts.direct(Sorts.ArrayCopy(arr1));
-            Console.WriteLine($"Прямое включение & полусорт // {Sorts.Count}");
-            Sorts.Count = 0;
+            //Sorts.direct(Sorts.ArrayCopy(arr));
+            //Console.WriteLine($"Прямое включение & рандом // {Sorts.Count}");
+            //Sorts.Count = 0;
+            //Sorts.direct(Sorts.ArrayCopy(arr1));
+            //Console.WriteLine($"Прямое включение & полусорт // {Sorts.Count}");
+            //Sorts.Count = 0;
 
-            Sorts.select(Sorts.ArrayCopy(arr));
-            Console.WriteLine($"Прямой выбор & рандом // {Sorts.Count}");
-            Sorts.Count = 0;
-            Sorts.select(Sorts.ArrayCopy(arr1));
-            Console.WriteLine($"Прямое выбор & полусорт // {Sorts.Count}");
-            Sorts.Count = 0;
+            //Sorts.select(Sorts.ArrayCopy(arr));
+            //Console.WriteLine($"Прямой выбор & рандом // {Sorts.Count}");
+            //Sorts.Count = 0;
+            //Sorts.select(Sorts.ArrayCopy(arr1));
+            //Console.WriteLine($"Прямое выбор & полусорт // {Sorts.Count}");
+            //Sorts.Count = 0;
 
-            Sorts.swap(Sorts.ArrayCopy(arr));
-            Console.WriteLine($"Прямой обмен & рандом // {Sorts.Count}");
-            Sorts.Count = 0;
-            Sorts.swap(Sorts.ArrayCopy(arr1));
-            Console.WriteLine($"Прямое обмен & полусорт // {Sorts.Count}");
-            Sorts.Count = 0;
+            //Sorts.swap(Sorts.ArrayCopy(arr));
+            //Console.WriteLine($"Прямой обмен & рандом // {Sorts.Count}");
+            //Sorts.Count = 0;
+            //Sorts.swap(Sorts.ArrayCopy(arr1));
+            //Console.WriteLine($"Прямое обмен & полусорт // {Sorts.Count}");
+            //Sorts.Count = 0;
 
-            Sorts.shaker(Sorts.ArrayCopy(arr));
-            Console.WriteLine($"Шейкерный & рандом // {Sorts.Count}");
-            Sorts.Count = 0;
-            Sorts.shaker(Sorts.ArrayCopy(arr1));
-            Console.WriteLine($"Шейкерный & полусорт // {Sorts.Count}");
-            Sorts.Count = 0;
+            //Sorts.shaker(Sorts.ArrayCopy(arr));
+            //Console.WriteLine($"Шейкерный & рандом // {Sorts.Count}");
+            //Sorts.Count = 0;
+            //Sorts.shaker(Sorts.ArrayCopy(arr1));
+            //Console.WriteLine($"Шейкерный & полусорт // {Sorts.Count}");
+            //Sorts.Count = 0;
+
+            //double[] arrcopy = Sorts.ArrayCopy(arr);
+            //double[] arr1copy = Sorts.ArrayCopy(arr1);
+            //Sorts.quick(arrcopy, 0, arrcopy.Length-1);
+            //Console.WriteLine($"Быстрая & рандом // {Sorts.Count}");
+            //Sorts.Count = 0;
+            //Sorts.quick(arr1copy, 0, arr1copy.Length-1);
+            //Console.WriteLine($"Быстрая & полусорт // {Sorts.Count}");
+            //Sorts.Count = 0;
+
+            //double[] arr2 = Sorts.RandomArray(5000);
+            //double[] arr3 = Sorts.HalfsortArray(5000);
+            //Sorts.quick(arr2, 0, arr2.Length - 1);
+            //Console.WriteLine($"Быстрая & рандом // {Sorts.Count}");
+            //Sorts.Count = 0;
+            //Sorts.quick(arr3, 0, arr3.Length - 1);
+            //Console.WriteLine($"Быстрая & полусорт // {Sorts.Count}");
+            //Sorts.Count = 0;
+
+            //double[] arr4 = Sorts.RandomArray(10000);
+            //double[] arr5 = Sorts.HalfsortArray(10000);
+            //Sorts.quick(arr4, 0, arr5.Length - 1);
+            //Console.WriteLine($"Быстрая & рандом // {Sorts.Count}");
+            //Sorts.Count = 0;
+            //Sorts.quick(arr4, 0, arr5.Length - 1);
+            //Console.WriteLine($"Быстрая & полусорт // {Sorts.Count}");
+            //Sorts.Count = 0;
         }
     }
 }

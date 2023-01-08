@@ -127,9 +127,36 @@ namespace SAOD
             }
             return array;
         }
-        public static double[] quick(double[] array)
+        public static double[] quick(double[] array, int leftIndex, int rightIndex)
         {
-
+            var i = leftIndex;
+            var j = rightIndex;
+            var pivot = array[leftIndex];
+            while (i <= j)
+            {
+                while (array[i] < pivot)
+                {
+                    i++;
+                }
+                while (array[j] > pivot)
+                {
+                    j--;
+                }
+                if (i <= j)
+                {
+                    Count += 1;
+                    double temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                    i++;
+                    j--;
+                }
+            }
+            if (leftIndex < j)
+                quick(array, leftIndex, j);
+            if (i < rightIndex)
+                quick(array, i, rightIndex);
+            return array;
         }
     }
 }
