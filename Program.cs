@@ -90,6 +90,24 @@ namespace SAOD
             //Sorts.quick(arr4, 0, arr5.Length - 1);
             //Console.WriteLine($"Быстрая & полусорт // {Sorts.Count}");
             //Sorts.Count = 0;
+
+            //RandomGraph RndGraph = new(15);
+            //RndGraph.PrintGraph();
+            //MST.primMST(RndGraph.Graph);
+
+            //DijkstaHandler DijHnd = new();
+            //var g = new Graph();
+            //var dijkstra = new Dijkstra(g);
+            Map map = new("D:\\VSProjects\\SAOD\\lab.png");
+            WaveAlg wave = new(map.lab);
+            //int[] start_xy = map.GetStartCoords();
+            //int[] end_xy = map.GetStartCoords();
+            //wave.traceOut();
+            wave.findPath(1, 78, 39, 1);
+            wave.waveOut();
+            map.CreateLabPathImg("D:\\VSProjects\\SAOD\\lab.png", wave.waveOutCoords());
+            wave.traceOut();
+
         }
     }
 }
